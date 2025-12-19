@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic Weabsite Example</title>
+    </head>
+    <body>
+        <h2> Dynamic Background color change</h2>
+
+        <button onclick="changecolor()">Change Background color</button>
+        <script>
+            function changecolor() {
+               let color =  ["lightblue", "lightgreen","lightpink","lightyellow"];
+               let randomIndex = Math.floor(Math.random() * color.length);
+               document.body.style.backgroundcolor = colors[randomIndex];
+            }
+        </script>
+    </body>
+</html>
