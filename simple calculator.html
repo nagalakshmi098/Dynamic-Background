@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: beige;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>simple calculator</h3>
+
+        </labelNum1:></label>
+        <input type="number" id="num1" placeholder="Enter first number">
+        </labelNum2:></label>
+        <input type="number" id="num2"placeholder="Enter second number">
+        <br><br>
+    
+        <button onclick="add()">addition</button>
+        <button onclick="add()">substraction</button>
+        <button onclick="add()">Multiplication</button>
+        <button onclick="add()">Division</button>
+
+        <p id="result"></p>
+
+        <script>
+            function add() {
+                var a = document.getElementById("num1").value;
+                var a = document.getElementById("num2").value;
+                var add = Number(a) + Number(b);
+                document.getElementById("result").innerHTML = "result:" + add;
+            }
+            function sub() {
+                var a = document.getElementById("num1").value;
+                var a = document.getElementById("num2").value;
+                var Sub = Number(a) - Number(b);
+                document.getElementById("result").innerHTML = "result:" + sub;   
+            }
+            function mul() {
+                var a = document.getElementById("num1").value;
+                var a = document.getElementById("num2").value;
+                var mul= Number(a) * Number(b);
+                document.getElementById("result").innerHTML = "result:" + mul;
+            }
+
+            function divi() {
+                var a = document.getElementById("num1").value;
+                var a = document.getElementById("num2").value;
+                var divi = Number(a) / Number(b);
+                document.getElementById("result").innerHTML = "result:" + divi;
+            }
+              
+        </script>
+    </body>
+</html>

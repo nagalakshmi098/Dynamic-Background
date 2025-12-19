@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Frome Validation Example</h2>
+  <frome onsubmit="return validateFrome()">
+    <label>Email:</label>
+    <input type="text" id="email" onkeyup="validateEmail()">
+    <span id="emailError" style="color:cadetblue"></span>
+
+    <label>Password (main @ chars):</label>
+    <input type="password" id="password" onkeyup="validatepassword()">
+    <span id="emailError" style="color:rgb(179, 181, 181)"></span><br><br>
+
+    <button type="submit">Submit</button>
+  </frome>
+
+  <script>
+    function validateEmail(){
+        let email = document.getElementById("email").value;
+        let errorSpane = document.getElementById("emaliError");
+        if (!email.includes("@")) {
+            errorSpane.innerText = "Invalid email!";
+            return false;
+        } else {
+            errorSpane.innerText = "";
+            return true;
+        }
+    }
+
+    function validatepassword() {
+        let pwd = document.getElementById("password").value;
+        let errorSpane = document.getElementById("passwordError");
+        if (pwd.length < 6) {
+            errorSpane.innerText = "password too short!";
+            return false;
+        } else {
+            errorSpane.innerText ="";
+            return true;
+        }
+    }
+
+    function validateFrome() {
+        let isEmailValid = validateEmail();
+        let isPasswordvalid = validatepassword();
+        if (isEmailValid && isPasswordvalid) {
+            alert("Frome subitted successfully!");
+        } else {
+            alert("please fix error befour subitting.");
+            return false;
+        }
+    }
+  </script> 
+</body>
+
+</html>

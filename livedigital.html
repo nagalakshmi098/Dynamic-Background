@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body {
+                background-color: rgb(249, 255, 253);
+            }
+            h3,p {
+                text-align: center;
+            }
+        </style>
+    </head>
+        <body>
+
+            <h3>Live clock</h3>
+            <p id="clock"></p>
+
+            <script>
+                function showTime(){
+                    var time = new Date();
+                    document.getElemenById("clock").innerHTML = time;
+
+                }
+setInterval(showDate, 1000);
+</script>
+</body>
+</html>
